@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+      <script type="text/javascript" src="jquery-1.7.1.js"></script>
+      <script type="text/javascript" src="jquery.exif.js"></script>
+    </head>
+
+    <body>
+      <form id="myform">
+        <input type="file" id="file" /> </br>
+        <label>Camera Model</label>
+        <input type="text" name="cameraModel" id="cameraModel" /> </br>
+
+        <label>Aperture</label>
+        <input type="text" name="aperture" id="aperture" /> </br>
+
+      </form>
+      <script>
+        var someCallback = function(exifObject) {
+
+            $('#cameraModel').val(exifObject.Model);
+            $('#aperture').val(exifObject.FNumber);
+
+            // Uncomment the line below to examine the
+            // EXIF object in console to read other values
+            //console.log(exifObject);
+
+        }
+
+      try {
+        $('#file').change(function() {
+            $(this).fileExif(someCallback);
+        });
+      }
+      catch (e) {
+        alert(e);
+      }
+
+    </script>
+    </body>
+    </html>
