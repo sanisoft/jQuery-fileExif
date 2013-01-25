@@ -1,0 +1,26 @@
+{
+    "name": "file-exif",
+    "version": "1.0.1",
+    "title": "jQuery fileEXIF",
+    "author": {
+        "name": "Tarique Sani"
+    },
+    "licenses": [
+        {
+            "type": "MPLv1.1",
+            "url": "https://github.com/sanisoft/jQuery-fileExif/blob/master/mpl-license.txt"
+        }
+    ],
+    "dependencies": {
+        "jquery": ">=1.7.1"
+    },
+    "description": "A jQuery plugin to read EXIF before the image has been uploaded",
+    "keywords": [
+        "exif","file-exif"
+    ],
+    "maintainers": [
+        {
+            "name": "Tarique Sani"
+        }
+    ]
+}
